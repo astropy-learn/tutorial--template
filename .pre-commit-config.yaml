@@ -15,23 +15,22 @@ repos:
       - id: ruff-format
         types_or: [python, pyi, jupyter]
 
-repos:
--   repo: https://github.com/pre-commit/pre-commit-hooks
+  - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v5.0.0
     hooks:
-    -   id: trailing-whitespace
+      - id: trailing-whitespace
         exclude: '.*\.fits$'
-    -   id: end-of-file-fixer
+      - id: end-of-file-fixer
         exclude_types: [csv]
         exclude: '.*\.fits$'
-    -   id: check-yaml
-    # prevent addition of (presumably data) files >= 1 MB 
-    # (for such files, see https://learn.astropy.org/contributing/how-to-contribute)
-    -   id: check-added-large-files
+      - id: check-yaml
+      # prevent addition of (presumably data) files >= 1 MB 
+      # (for such files, see https://learn.astropy.org/contributing/how-to-contribute)
+      - id: check-added-large-files
         args: ["--maxkb=1000"]
 
--   repo: https://github.com/kynan/nbstripout
+  - repo: https://github.com/kynan/nbstripout
     rev: 0.8.1
     hooks:
-    -   id: nbstripout
+      - id: nbstripout
         args: ["--extra-keys='metadata.kernelspec metadata.language_info.version metadata.toc'"]
