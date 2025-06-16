@@ -1,5 +1,5 @@
 # Mac
-.DS_Store 
+.DS_Store
 
 # act
 /bin/act
@@ -12,8 +12,8 @@ __pycache__/
 # C extensions
 *.so
 
-# Jupyterbook output 
-_build/ 
+# Jupyterbook output
+_build/
 
 # Distribution / packaging
 .Python

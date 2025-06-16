@@ -24,7 +24,7 @@ repos:
         exclude_types: [csv]
         exclude: '.*\.fits$'
       - id: check-yaml
-      # prevent addition of (presumably data) files >= 1 MB 
+      # prevent addition of (presumably data) files >= 1 MB
       # (for such files, see https://learn.astropy.org/contributing/how-to-contribute)
       - id: check-added-large-files
         args: ["--maxkb=1000"]

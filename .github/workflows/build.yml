@@ -3,7 +3,7 @@ name: 'Call actions to pre-process config files and execute/convert notebook'
 env:
     PYTHON-VERSION: "3.12"
 
-on: 
+on:
   push:
     branches:
       - main
@@ -23,11 +23,11 @@ jobs:
         - name: Call custom action to pre-process config files
           id: pre-process
           uses: astropy-learn/action--pre-process@main
-          with: 
+          with:
             python-version: ${{ env.PYTHON-VERSION }}
 
         - name: Call custom action to execute and convert notebook
           uses: astropy-learn/action--execute-convert@main
-          with: 
+          with:
             python-version: ${{ env.PYTHON-VERSION }}
             tutorial-slug: ${{ steps.pre-process.outputs.tutorial-slug }}
