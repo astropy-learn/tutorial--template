@@ -16,9 +16,9 @@ on:
 jobs:
     preprocess-execute-convert:
       runs-on: ubuntu-latest
+      if: ${{ github.repository != 'astropy-learn/tutorial--template' }}      
       permissions:
         contents: write
-      if: ${{ github.repository != 'astropy-learn/astropy-tutorials' }}
       steps:
         - name: Call custom action to pre-process config files
           id: pre-process
