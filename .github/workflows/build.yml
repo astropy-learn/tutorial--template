@@ -16,7 +16,7 @@ on:
 jobs:
     preprocess-execute-convert:
       runs-on: ubuntu-latest
-      if: ${{ github.repository != 'astropy-learn/tutorial--template' }}      
+      if: ${{ github.repository != 'astropy-learn/tutorial--template' }}
       permissions:
         contents: write
       steps:
