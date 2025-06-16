@@ -18,6 +18,7 @@ jobs:
       runs-on: ubuntu-latest
       permissions:
         contents: write
+      if: ${{ github.repository != 'astropy-learn/astropy-tutorials' }}
       steps:
         - name: Call custom action to pre-process config files
           id: pre-process
